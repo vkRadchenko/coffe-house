@@ -1,0 +1,99 @@
+@import 'variables';
+
+.mobileApp {
+  display: flex;
+  margin-top: 100px;
+  text-align: left;
+  align-items: center;
+  gap: 100px;
+}
+
+.offer {
+  flex: 1 0 0;
+  p {
+    margin: 40px 0;
+  }
+}
+
+.offer__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn__app,
+.btn__google {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  padding: 12px 20px;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn__content {
+  display: flex;
+  flex-direction: column;
+  :last-child {
+    font-weight: 600;
+  }
+}
+
+.btn__app::before {
+  content: '';
+  background: no-repeat url('../assets/icon_app.svg');
+  width: 36px;
+  height: 36px;
+}
+
+.btn__google::before {
+  content: '';
+  background: no-repeat url('../assets/icon_google.svg');
+  width: 36px;
+  height: 36px;
+}
+
+.btn__app:hover,
+.btn__google:hover {
+  background: $background-container;
+  color: $text-light;
+  transition: 0.5s;
+}
+
+.btn__google:hover::before {
+  background: no-repeat url('../assets/icon__google_light.svg');
+}
+.btn__app:hover::before {
+  background: no-repeat url('../assets/icon__app_light.svg');
+}
+
+@media (max-width: 768px) {
+  .mobileApp {
+    flex-direction: column;
+  }
+  .btn__app:hover,
+  .btn__google:hover {
+    background: $background-body;
+    color: $text-dark;
+    transition: 0.5s;
+  }
+  .btn__google:hover::before {
+    background: no-repeat url('../assets/icon_google.svg');
+  }
+  .btn__app:hover::before {
+    background: no-repeat url('../assets/icon_app.svg');
+  }
+}
+@media (max-width: 550px) {
+  .offer__buttons {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 380px) {
+  .mobileApp {
+    gap: 40px;
+  }
+}

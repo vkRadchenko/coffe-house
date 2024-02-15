@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="modal__portal"></div>
+    <header class="header container">
+      <div class="header__logo">
+        <a href="../index.html">
+          <img src="../assets/logo.svg" alt="logo" />
+        </a>
+      </div>
+      <nav id="nav__menu">
+        <ul class="header__nav_menu">
+          <li>
+            <a class="nav__item" href="../index.html#favorite__coffee"
+              >Favorite coffee</a
+            >
+          </li>
+          <li><a class="nav__item" href="../index.html#about">About</a></li>
+          <li>
+            <a class="nav__item" href="../index.html#mobileApp">Mobile app</a>
+          </li>
+          <li><a class="nav__item" href="#footer">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="header__cofee_menu">
+        <a class="nav__item current__nav-item" href="#">Menu</a>
+      </div>
+      <div class="header__burger_menu"></div>
+    </header>
+    <div class="modal"></div>
+    <main class="main container">
+      <section class="menu">
+        <div class="menu__offer">
+          <h1>
+            Behind each of our cups hides an
+            <span class="accent">amazing surprise</span>
+          </h1>
+          <div class="menu__tabs">
+            <div class="tab__item active" id="coffee">
+              <span class="tab__item_coffee">Coffee</span>
+            </div>
+            <div class="tab__item" id="tea">
+              <span class="tab__item_tea">Tea</span>
+            </div>
+            <div class="tab__item" id="dessert">
+              <span class="tab__item_desert">Dessert</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu__products" id="menu__products"></div>
+      </section>
+    </main>
+    <footer class="footer container" id="footer">
+      <div class="footer__wrapper">
+        <div class="footer__offer">
+          <h2>
+            Sip, Savor, Smile. <span class="accent">It’s coffee time!</span>
+          </h2>
+          <div class="footer__socials">
+            <a href="#">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#E1D4C9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="twitter">
+                  <path
+                    d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#E1D4C9"
+              >
+                <g id="instagram">
+                  <path
+                    d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"
+                  />
+                  <path
+                    id="Vector_3"
+                    d="M17.5 6.51L17.51 6.49889"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#E1D4C9"
+              >
+                <g id="facebook">
+                  <path
+                    d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <h3>Contact us</h3>
+          <div class="contacts__info">
+            <div class="contact__hover_effect">
+              <a
+                href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.698309%2C47.209886&mode=whatshere&whatshere%5Bpoint%5D=39.697941%2C47.209823&whatshere%5Bzoom%5D=13.9&z=13.9"
+                class="contact__adres"
+                target="_blank"
+                >8558 Green Rd., LA</a
+              >
+            </div>
+            <div class="contact__hover_effect">
+              <a class="contact__phone" href="tel:+1(603)5550123"
+                >+1 (603) 555-0123</a
+              >
+            </div>
+            <span class="contact__openTime">Mon-Sat: 9:00 AM – 23:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="shadow__overlay"></div>
+    <script src="../app.js"></script>
+    <script type="module" src="menuLayout.js"></script>
+  </body>
+</html>

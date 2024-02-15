@@ -1,0 +1,45 @@
+@import 'variables';
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 100px;
+  width: 0%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  padding-top: 60px;
+  background-color: $background-body;
+  transition: all 400ms cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  transition-delay: 100ms;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .modal.active {
+    width: 100%;
+  }
+
+  .modal {
+    .header__nav_menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+    .nav__item {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 125%;
+    }
+  }
+  .header__cofee_menu .nav__item {
+    gap: 0 16px;
+    &::after {
+      background: no-repeat url('../assets/coffee-cup-big.svg');
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

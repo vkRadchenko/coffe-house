@@ -1,0 +1,193 @@
+@import 'variables';
+
+.modalProduct {
+  display: flex;
+  align-items: flex-start;
+  width: 768px;
+  height: 472px;
+  padding: 16px;
+  background-color: $background-body;
+  gap: 20px;
+  border-radius: 40px;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.noSmyth {
+  overflow: hidden;
+  padding: 0;
+}
+
+.modal__portal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal__portal.show {
+  visibility: visible;
+}
+
+.shadow__overlay {
+  position: fixed;
+  border: none;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  background-color: $background-backdrop;
+}
+
+.shadow__overlay.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modalProduct__box_about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.size__box_btn {
+  display: flex;
+  margin-top: 6px;
+  gap: 8px;
+}
+
+.modalProduct__btn {
+  &::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-dark;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    padding-top: 2px;
+  }
+}
+.size__btn_s {
+  &::before {
+    content: 'S';
+    background-color: $border-light;
+  }
+}
+.size__btn_m {
+  &::before {
+    content: 'M';
+    background-color: $border-light;
+  }
+}
+.size__btn_l {
+  &::before {
+    content: 'L';
+    background-color: $border-light;
+  }
+}
+
+.modalProduct__item_additives {
+  margin-top: 20px;
+}
+.additives__btn.active {
+  pointer-events: auto;
+}
+
+.additives__btn_1 {
+  &::before {
+    content: '1';
+    background-color: $border-light;
+  }
+}
+.additives__btn_2 {
+  &::before {
+    content: '2';
+    background-color: $border-light;
+  }
+}
+.additives__btn_3 {
+  &::before {
+    content: '3';
+    background-color: $border-light;
+  }
+}
+
+.modalProduct__item_price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalProduct__item_info {
+  border-top: 1px solid $border-light;
+  p {
+    font-size: 10px;
+    line-height: 140%;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    &::before {
+      content: '';
+      background: center url('../assets/info.svg') no-repeat;
+      width: 30px;
+      height: 16px;
+    }
+  }
+  button {
+    margin-top: 32px;
+    width: 100%;
+    justify-content: center;
+    background-color: $background-body;
+    padding: 10px 0;
+    border: 1px solid $border-dark;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalProduct {
+    max-width: 656px;
+    height: auto;
+  }
+  .item__box_img {
+    flex-wrap: wrap;
+  }
+  .size__box_btn {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .modalProduct {
+    max-width: 310px;
+    .item__box_img {
+      display: none;
+    }
+  }
+
+  /*   .modalProduct {
+    max-width: 656px;
+    height: auto;
+  }
+  .item__box_img {
+    flex-wrap: wrap;
+  }
+  .size__box_btn {
+    flex-wrap: wrap;
+  } */
+}
