@@ -1,4 +1,4 @@
-import products from '../mock/products.json' 
+import products from '../mock/products.json' assert { type: "json" };
 
 const shadow__overlay = document.querySelector('.shadow__overlay')
 const modalPortal = document.querySelector('.modal__portal')
